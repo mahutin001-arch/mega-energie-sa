@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>MEGA ENERGIE SA — Énergie, matières premières &amp; logistique · Burkina Faso</title>
+<meta name="description" content="MEGA ENERGIE SA — maison de négoce burkinabè : produits pétroliers, pétrole & gaz, or, riz et sucre, transportés à travers l'Afrique de l'Ouest et au-delà depuis 2009." />
+
+<script>document.documentElement.className = document.documentElement.className.replace('no-js','js');</script>
+
+<link rel="icon" type="image/png" href="logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: { extend: {
+    colors: {
+      ink:{DEFAULT:'#070908',900:'#070908',800:'#0C0F0E',700:'#111614'},
+      gold:{DEFAULT:'#D9A53A',soft:'#E7B85A',deep:'#A87C22'},
+      emerald:{DEFAULT:'#2FB264',soft:'#46C97C'},
+      cream:'#F3F5F3', muted:'#8C968F', faint:'#5C655F',
+    },
+    fontFamily:{ sans:['-apple-system','BlinkMacSystemFont','"SF Pro Display"','Inter','"Segoe UI"','Roboto','sans-serif'] },
+  }}
+}
+</script>
+
+<style>
+  :root{ --font:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter","Segoe UI",Roboto,sans-serif;
+         --gold:#D9A53A; --emerald:#2FB264; --line:rgba(243,245,243,.10); }
+  *{ -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+  html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+  body{ background:#070908; color:#F3F5F3; font-family:var(--font); letter-spacing:-0.011em; overflow-x:hidden; }
+  ::selection{ background:rgba(217,165,58,.28); color:#fff; }
+  ::-webkit-scrollbar{ width:9px; } ::-webkit-scrollbar-track{ background:#070908; }
+  ::-webkit-scrollbar-thumb{ background:#2a312d; border-radius:20px; }
+
+  h1,h2{ letter-spacing:-0.033em; font-weight:600; line-height:1.04; }
+  h3,h4{ letter-spacing:-0.02em; }
+  .hl-gold{ color:#E7B85A; } .hl-green{ color:#46C97C; }
+  /* legacy accent classes kept solid (no gradients) */
+  .text-gold{ color:#E7B85A; } .text-greengold{ color:#46C97C; } .text-cream{ color:#F3F5F3; }
+
+  .wrap{ max-width:1200px; margin:0 auto; padding-left:20px; padding-right:20px; }
+  @media(min-width:640px){ .wrap{ padding-left:32px; padding-right:32px; } }
+  .sec{ padding-top:80px; padding-bottom:80px; }
+  @media(min-width:768px){ .sec{ padding-top:120px; padding-bottom:120px; } }
+  @media(min-width:1024px){ .sec{ padding-top:150px; padding-bottom:150px; } }
+
+  .eyebrow{ letter-spacing:.26em; font-weight:600; font-size:11px; text-transform:uppercase; color:#D9A53A; }
+  .rule{ height:1px; background:var(--line); }
+
+  .panel{ background:rgba(243,245,243,.025); border:1px solid var(--line); transition:border-color .45s ease, background .45s ease, transform .55s cubic-bezier(.16,1,.3,1); }
+  .panel:hover{ border-color:rgba(217,165,58,.45); background:rgba(243,245,243,.04); }
+  .lift:hover{ transform:translateY(-6px); }
+
+  .btn{ display:inline-flex; align-items:center; justify-content:center; gap:.5rem; border-radius:999px; font-weight:600; font-size:15px;
+         padding:15px 30px; transition:transform .3s cubic-bezier(.16,1,.3,1), background .3s ease, color .3s ease, border-color .3s ease; min-height:52px; }
+  .btn-gold{ background:#D9A53A; color:#0A0A05; }
+  .btn-gold:hover{ background:#E7B85A; transform:translateY(-2px); }
+  .btn-line{ border:1px solid rgba(243,245,243,.22); color:#F3F5F3; }
+  .btn-line:hover{ border-color:#D9A53A; color:#E7B85A; transform:translateY(-2px); }
+
+  /* nav underline links */
+  .nlink{ position:relative; padding:6px 0; color:rgba(243,245,243,.72); transition:color .3s ease; }
+  .nlink::after{ content:""; position:absolute; left:0; bottom:0; height:1px; width:0; background:#D9A53A; transition:width .35s cubic-bezier(.16,1,.3,1); }
+  .nlink:hover{ color:#F3F5F3; } .nlink:hover::after, .nlink.active::after{ width:100%; }
+  .nlink.active{ color:#F3F5F3; }
+
+  #nav{ transition:background .45s ease, border-color .45s ease, padding .35s ease; border-bottom:1px solid transparent; }
+  #nav.scrolled{ background:rgba(7,9,8,.82); border-color:var(--line); backdrop-filter:blur(14px) saturate(120%); -webkit-backdrop-filter:blur(14px) saturate(120%); }
+
+  #progress{ position:fixed; top:0; left:0; height:2px; width:0; background:#D9A53A; z-index:70; }
+
+  /* mobile menu */
+  #msheet{ transition:opacity .4s ease, visibility .4s ease; }
+  #msheet.closed{ opacity:0; visibility:hidden; pointer-events:none; }
+  #msheet .mlink{ font-size:30px; font-weight:600; letter-spacing:-0.02em; color:#F3F5F3; opacity:0; transform:translateY(18px);
+                  transition:opacity .5s ease, transform .5s cubic-bezier(.16,1,.3,1), color .25s ease; }
+  #msheet:not(.closed) .mlink{ opacity:1; transform:none; }
+  #msheet .mlink:active{ color:#E7B85A; }
+  #msheet .mlink:nth-child(1){transition-delay:.06s}#msheet .mlink:nth-child(2){transition-delay:.12s}
+  #msheet .mlink:nth-child(3){transition-delay:.18s}#msheet .mlink:nth-child(4){transition-delay:.24s}#msheet .mlink:nth-child(5){transition-delay:.30s}
+
+  .lang-toggle{ display:inline-flex; align-items:center; gap:1px; border:1px solid rgba(243,245,243,.18); border-radius:999px; padding:3px; }
+  .lang-toggle button{ font-size:12px; font-weight:600; letter-spacing:.04em; color:#8C968F; padding:5px 11px; border-radius:999px; transition:all .25s ease; min-width:40px; }
+  .lang-toggle button.active{ background:#D9A53A; color:#0A0A05; }
+
+  .marquee{ display:flex; width:max-content; animation:scrollx 48s linear infinite; }
+  @keyframes scrollx{ to{ transform:translateX(-50%) } }
+  .marquee-wrap:hover .marquee{ animation-play-state:paused; }
+
+  .float-y{ animation:float-y 7s ease-in-out infinite; }
+  @keyframes float-y{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+
+  .js [data-reveal]{ opacity:0; transform:translateY(26px); }
+  .js [data-reveal].in{ opacity:1; transform:none; transition:opacity 1s cubic-bezier(.16,1,.3,1), transform 1s cubic-bezier(.16,1,.3,1); }
+
+  input,select,textarea{ font-family:var(--font); }
+  .field{ width:100%; background:rgba(243,245,243,.03); border:1px solid var(--line); border-radius:12px; padding:14px 16px; font-size:15px; color:#F3F5F3; transition:border-color .3s ease; min-height:50px; }
+  .field:focus{ outline:none; border-color:#D9A53A; }
+  label{ display:block; font-size:12px; color:#8C968F; margin-bottom:8px; letter-spacing:.02em; }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation:none !important; scroll-behavior:auto !important; transition:none !important; }
+    .js [data-reveal]{ opacity:1 !important; transform:none !important; }
+  }
+</style>
+</head>
+
+<body>
+<div id="progress"></div>
+
+<!-- ===================== NAV ===================== -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50">
+  <nav class="wrap flex items-center justify-between py-4">
+    <a href="#top" class="flex items-center gap-3 shrink-0">
+      <img src="logo-mark.png" alt="MEGA ENERGIE SA" class="h-10 w-auto">
+      <span class="leading-none">
+        <span class="block text-lg font-bold tracking-tight text-greengold">MEGA</span>
+        <span class="block text-[9px] tracking-[.34em] text-gold font-semibold mt-0.5">ENERGIE SA</span>
+      </span>
+    </a>
+
+    <div class="hidden lg:flex items-center gap-8 text-sm font-medium">
+      <a href="#about"    class="nlink" data-spy data-i18n="nav.about">À propos</a>
+      <a href="#trade"    class="nlink" data-spy data-i18n="nav.trade">Nos activités</a>
+      <a href="#services" class="nlink" data-spy data-i18n="nav.services">Savoir-faire</a>
+      <a href="#network"  class="nlink" data-spy data-i18n="nav.company">L'entreprise</a>
+      <a href="#why"      class="nlink" data-spy data-i18n="nav.why">Pourquoi MEGA</a>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <div class="lang-toggle" role="group" aria-label="Language"><button data-lang="fr">FR</button><button data-lang="en">EN</button></div>
+      <a href="#contact" class="hidden sm:inline-flex btn btn-gold !min-h-0 !py-2.5 !px-5 !text-sm" data-i18n="nav.cta">Demander un devis</a>
+      <button id="burger" class="lg:hidden w-11 h-11 grid place-items-center -mr-2" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F3F5F3" stroke-width="1.6"><path d="M3 7h18M3 17h18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- mobile full-screen menu -->
+<div id="msheet" class="closed fixed inset-0 z-[65] lg:hidden bg-ink-900/95 backdrop-blur-xl flex flex-col">
+  <div class="wrap flex items-center justify-between py-4">
+    <span class="text-sm tracking-[.3em] text-gold font-semibold">MENU</span>
+    <button id="mclose" class="w-11 h-11 grid place-items-center -mr-2" aria-label="Close">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F3F5F3" stroke-width="1.6"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="wrap flex-1 flex flex-col justify-center gap-6">
+    <a href="#about"    class="mlink" data-i18n="nav.about">À propos</a>
+    <a href="#trade"    class="mlink" data-i18n="nav.trade">Nos activités</a>
+    <a href="#services" class="mlink" data-i18n="nav.services">Savoir-faire</a>
+    <a href="#network"  class="mlink" data-i18n="nav.company">L'entreprise</a>
+    <a href="#why"      class="mlink" data-i18n="nav.why">Pourquoi MEGA</a>
+  </div>
+  <div class="wrap pb-10">
+    <a href="#contact" class="btn btn-gold w-full" data-i18n="nav.cta">Demander un devis</a>
+  </div>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<section id="top" class="relative min-h-[100svh] flex items-center overflow-hidden pt-28 pb-16">
+  <div class="absolute inset-0 -z-10" style="background:radial-gradient(130% 80% at 50% -10%, rgba(47,178,100,.06), transparent 55%)"></div>
+  <div class="absolute inset-x-0 bottom-0 h-px -z-10" style="background:linear-gradient(90deg,transparent,var(--line),transparent)"></div>
+
+  <div class="wrap w-full grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+    <div class="lg:col-span-7 order-2 lg:order-1">
+      <p data-hero class="eyebrow mb-6 flex items-center gap-3">
+        <span class="w-7 h-px bg-gold/70"></span><span data-i18n="hero.eyebrow">ÉNERGIE · MATIÈRES PREMIÈRES · LOGISTIQUE</span>
+      </p>
+      <h1 data-hero class="text-[clamp(2.5rem,10.5vw,5.6rem)]" data-i18n="hero.title">
+        Le négoce <span class="hl-green">à travers l'Afrique de l'Ouest</span> et au-delà.
+      </h1>
+      <p data-hero class="mt-7 max-w-xl text-base sm:text-lg text-muted leading-relaxed font-light" data-i18n="hero.sub">
+        MEGA ENERGIE SA négocie et transporte des produits pétroliers, du pétrole &amp; gaz, de l'or, du riz et du sucre.
+      </p>
+      <p data-hero class="mt-4 italic text-gold/85 text-base sm:text-lg" data-i18n="hero.tagline">« L'énergie en mouvement. »</p>
+
+      <div data-hero class="mt-9 flex flex-col sm:flex-row gap-3 sm:gap-4">
+        <a href="#contact" class="btn btn-gold w-full sm:w-auto" data-i18n="hero.cta1">Démarrer un échange</a>
+        <a href="#trade" class="btn btn-line w-full sm:w-auto" data-i18n="hero.cta2">Nos produits</a>
+      </div>
+
+      <div data-hero class="mt-12 grid grid-cols-2 gap-4 sm:gap-8 max-w-xs border-t border-[color:var(--line)] pt-8">
+        <div><div class="text-2xl sm:text-4xl font-semibold">2009</div><div class="text-[11px] sm:text-xs text-muted mt-1.5" data-i18n="hero.stat1">Création</div></div>
+        <div><div class="text-2xl sm:text-4xl font-semibold">5</div><div class="text-[11px] sm:text-xs text-muted mt-1.5" data-i18n="hero.stat3">Filières</div></div>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5 order-1 lg:order-2 flex justify-center lg:justify-end">
+      <img data-hero-mark src="logo-mark.png" alt="MEGA ENERGIE SA" class="float-y w-32 sm:w-44 lg:w-72 h-auto drop-shadow-[0_24px_60px_rgba(0,0,0,.55)]">
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MARQUEE ===================== -->
+<div class="border-y border-[color:var(--line)] py-5 marquee-wrap overflow-hidden">
+  <div class="marquee gap-10 text-muted text-xs sm:text-sm uppercase tracking-[.22em] font-medium">
+    <span class="flex gap-10 pr-10 items-center" data-i18n="marquee"><span>Produits pétroliers</span><span class="w-1 h-1 rounded-full bg-gold/60"></span><span>Pétrole &amp; Gaz</span><span class="w-1 h-1 rounded-full bg-gold/60"></span><span>Or</span><span class="w-1 h-1 rounded-full bg-gold/60"></span><span>Riz</span><span class="w-1 h-1 rounded-full bg-gold/60"></span><span>Sucre</span><span class="w-1 h-1 rounded-full bg-gold/60"></span><span>Transport &amp; Logistique</span><span class="w-1 h-1 rounded-full bg-gold/60"></span></span>
+    <span class="flex gap-10 pr-10 items-center" aria-hidden="true" data-i18n="marquee"><span>Produits pétroliers</span><span class="w-1 h-1 rounded-full bg-gold/60"></span><span>Pétrole &amp; Gaz</span><span class="w-1 h-1 rounded-full bg-gold/60"></span><span>Or</span><span class="w-1 h-1 rounded-full bg-gold/60"></span><span>Riz</span><span class="w-1 h-1 rounded-full bg-gold/60"></span><span>Sucre</span><span class="w-1 h-1 rounded-full bg-gold/60"></span><span>Transport &amp; Logistique</span><span class="w-1 h-1 rounded-full bg-gold/60"></span></span>
+  </div>
+</div>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="sec">
+  <div class="wrap grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <div data-reveal class="lg:col-span-5 order-2 lg:order-1">
+      <div class="panel rounded-2xl p-1.5">
+        <div class="rounded-xl overflow-hidden bg-ink-800 aspect-[4/5] relative grid place-items-center">
+          <img src="logo-full.png" alt="MEGA ENERGIE SA" class="w-48 sm:w-56 h-auto relative float-y">
+          <div class="absolute bottom-5 left-5 right-5 bg-ink-900/70 backdrop-blur-md border border-[color:var(--line)] rounded-xl p-5">
+            <div class="text-gold text-xl font-semibold" data-i18n="about.badge.t">Depuis 2009</div>
+            <p class="text-sm text-muted mt-1 font-light" data-i18n="about.badge.p">Née à Fada N'Gourma. De confiance dans toute la région.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7 order-1 lg:order-2">
+      <p data-reveal class="eyebrow mb-5" data-i18n="about.eyebrow">QUI SOMMES-NOUS</p>
+      <h2 data-reveal class="text-3xl sm:text-4xl lg:text-5xl mb-7" data-i18n="about.title">
+        Une maison de négoce burkinabè bâtie sur la <span class="hl-gold">confiance</span> et le <span class="hl-green">mouvement</span>.
+      </h2>
+      <p data-reveal class="text-muted leading-relaxed mb-5 font-light text-base sm:text-lg" data-i18n="about.p1">
+        Fondée en 2009 à Fada N'Gourma, MEGA ENERGIE SA a démarré dans la distribution de produits pétroliers avant de devenir un groupe diversifié de négoce et de logistique.
+      </p>
+      <p data-reveal class="text-muted leading-relaxed mb-7 font-light text-base sm:text-lg" data-i18n="about.p2">
+        Avec un réseau de banques correspondantes en Europe, en Amérique du Nord et au-delà, nous relions l'offre régionale aux marchés mondiaux.
+      </p>
+      <p data-reveal class="text-sm text-faint mb-9" data-i18n="about.lead">
+        Dirigée par <span class="text-cream">Samuel Ouoba</span> (Directeur Général) et <span class="text-cream">Comlan Fréjus Victor Amoussou</span> (Directeur Général Adjoint).
+      </p>
+      <div class="grid sm:grid-cols-2 gap-px bg-[color:var(--line)] rounded-2xl overflow-hidden">
+        <div data-reveal class="bg-ink p-6">
+          <div class="text-gold text-xl font-semibold mb-2" data-i18n="about.v1.t">Intégrité</div>
+          <p class="text-sm text-muted font-light" data-i18n="about.v1.p">Chaque contrat honoré. Chaque cargaison maîtrisée.</p>
+        </div>
+        <div data-reveal class="bg-ink p-6">
+          <div class="text-greengold text-xl font-semibold mb-2" data-i18n="about.v2.t">Vision</div>
+          <p class="text-sm text-muted font-light" data-i18n="about.v2.p">Diversifiée, régionale et pensée pour durer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHAT WE TRADE ===================== -->
+<section id="trade" class="sec border-t border-[color:var(--line)]">
+  <div class="wrap">
+    <div class="max-w-2xl mb-14 sm:mb-16">
+      <p data-reveal class="eyebrow mb-5" data-i18n="trade.eyebrow">PORTEFEUILLE</p>
+      <h2 data-reveal class="text-3xl sm:text-4xl lg:text-5xl" data-i18n="trade.title">Ce que nous <span class="hl-gold">négocions</span> &amp; transportons</h2>
+      <p data-reveal class="text-muted mt-5 font-light text-base sm:text-lg" data-i18n="trade.sub">Cinq filières, un seul opérateur responsable — sourcées, financées, transportées et livrées.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+      <article data-reveal class="panel lift rounded-2xl p-6 sm:p-7">
+        <div class="flex items-center justify-between mb-6"><span class="text-xs text-faint font-mono">01</span>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D9A53A" stroke-width="1.5"><path d="M3 22h12V8l-3-3H3v17ZM15 11h3a2 2 0 0 1 2 2v5a1.5 1.5 0 0 1-3 0V13M7 3v2"/></svg></div>
+        <h3 class="text-xl sm:text-2xl mb-2 font-semibold" data-i18n="trade.c1.t">Produits pétroliers</h3>
+        <p class="text-sm text-muted font-light leading-relaxed" data-i18n="trade.c1.p">Gasoil, diesel et carburants — distribués aux spécifications, dans les délais.</p>
+      </article>
+      <article data-reveal class="panel lift rounded-2xl p-6 sm:p-7">
+        <div class="flex items-center justify-between mb-6"><span class="text-xs text-faint font-mono">02</span>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D9A53A" stroke-width="1.5"><path d="M12 2s6 6 6 11a6 6 0 1 1-12 0c0-5 6-11 6-11Z"/></svg></div>
+        <h3 class="text-xl sm:text-2xl mb-2 font-semibold" data-i18n="trade.c2.t">Pétrole &amp; Gaz</h3>
+        <p class="text-sm text-muted font-light leading-relaxed" data-i18n="trade.c2.p">Négoce, approvisionnement et enlèvement de brut et de gaz.</p>
+      </article>
+      <article data-reveal class="panel lift rounded-2xl p-6 sm:p-7">
+        <div class="flex items-center justify-between mb-6"><span class="text-xs text-faint font-mono">03</span>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D9A53A" stroke-width="1.5"><path d="M5 8h14l-2 5H7L5 8ZM7 13l-1 6M17 13l1 6M9 8 8 4h8l-1 4"/></svg></div>
+        <h3 class="text-xl sm:text-2xl mb-2 font-semibold" data-i18n="trade.c3.t">Or</h3>
+        <p class="text-sm text-muted font-light leading-relaxed" data-i18n="trade.c3.p">Sourcing et négoce de métaux précieux, conformité et traçabilité rigoureuses.</p>
+      </article>
+      <article data-reveal class="panel lift rounded-2xl p-6 sm:p-7">
+        <div class="flex items-center justify-between mb-6"><span class="text-xs text-faint font-mono">04</span>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D9A53A" stroke-width="1.5"><path d="M12 3c4 3 5 7 5 10a5 5 0 0 1-10 0c0-3 1-7 5-10ZM4 21c3-2 5-2 8-2s5 0 8 2"/></svg></div>
+        <h3 class="text-xl sm:text-2xl mb-2 font-semibold" data-i18n="trade.c4.t">Riz</h3>
+        <p class="text-sm text-muted font-light leading-relaxed" data-i18n="trade.c4.p">Négoce et distribution agricoles en gros pour les marchés de denrées de base.</p>
+      </article>
+      <article data-reveal class="panel lift rounded-2xl p-6 sm:p-7">
+        <div class="flex items-center justify-between mb-6"><span class="text-xs text-faint font-mono">05</span>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D9A53A" stroke-width="1.5"><rect x="4" y="7" width="16" height="11" rx="2"/><path d="M4 11h16M9 7V5h6v2"/></svg></div>
+        <h3 class="text-xl sm:text-2xl mb-2 font-semibold" data-i18n="trade.c5.t">Sucre</h3>
+        <p class="text-sm text-muted font-light leading-relaxed" data-i18n="trade.c5.p">Import, négoce et distribution de sucre à travers les chaînes régionales.</p>
+      </article>
+      <article data-reveal class="panel lift rounded-2xl p-6 sm:p-7">
+        <div class="flex items-center justify-between mb-6"><span class="text-xs text-faint font-mono">06</span>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D9A53A" stroke-width="1.5"><path d="M1 16V8h13v8M14 11h4l3 3v2h-7M3 16a2 2 0 1 0 4 0 2 2 0 0 0-4 0ZM15 16a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z"/></svg></div>
+        <h3 class="text-xl sm:text-2xl mb-2 font-semibold" data-i18n="trade.c6.t">Transport &amp; Logistique</h3>
+        <p class="text-sm text-muted font-light leading-relaxed" data-i18n="trade.c6.p">Transport routier et en vrac jusqu'au dernier kilomètre.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CAPABILITIES ===================== -->
+<section id="services" class="sec border-t border-[color:var(--line)]">
+  <div class="wrap">
+    <div class="max-w-2xl mb-14 sm:mb-16">
+      <p data-reveal class="eyebrow mb-5" data-i18n="services.eyebrow">SAVOIR-FAIRE</p>
+      <h2 data-reveal class="text-3xl sm:text-4xl lg:text-5xl" data-i18n="services.title">Toute la chaîne, <span class="hl-green">de bout en bout</span></h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[color:var(--line)] rounded-2xl overflow-hidden">
+      <div data-reveal class="bg-ink p-7 lg:p-8">
+        <div class="text-4xl font-semibold text-faint mb-5">01</div>
+        <h3 class="text-lg sm:text-xl mb-3 font-semibold text-gold" data-i18n="services.c1.t">Négoce &amp; Approvisionnement</h3>
+        <p class="text-sm text-muted font-light leading-relaxed" data-i18n="services.c1.p">Sourcing et tarification compétitifs, lignes d'approvisionnement sécurisées.</p>
+      </div>
+      <div data-reveal class="bg-ink p-7 lg:p-8">
+        <div class="text-4xl font-semibold text-faint mb-5">02</div>
+        <h3 class="text-lg sm:text-xl mb-3 font-semibold text-gold" data-i18n="services.c2.t">Transport &amp; Logistique</h3>
+        <p class="text-sm text-muted font-light leading-relaxed" data-i18n="services.c2.p">Transport routier et en vrac, affrété et suivi jusqu'à destination.</p>
+      </div>
+      <div data-reveal class="bg-ink p-7 lg:p-8">
+        <div class="text-4xl font-semibold text-faint mb-5">03</div>
+        <h3 class="text-lg sm:text-xl mb-3 font-semibold text-gold" data-i18n="services.c3.t">Stockage &amp; Distribution</h3>
+        <p class="text-sm text-muted font-light leading-relaxed" data-i18n="services.c3.p">Des réseaux fiables qui maintiennent un approvisionnement stable.</p>
+      </div>
+      <div data-reveal class="bg-ink p-7 lg:p-8">
+        <div class="text-4xl font-semibold text-faint mb-5">04</div>
+        <h3 class="text-lg sm:text-xl mb-3 font-semibold text-gold" data-i18n="services.c4.t">Conformité &amp; Financement</h3>
+        <p class="text-sm text-muted font-light leading-relaxed" data-i18n="services.c4.p">Financement du négoce, KYC et conformité réglementaire complète.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COMPANY / STATS ===================== -->
+<section id="network" class="sec border-t border-[color:var(--line)]">
+  <div class="wrap">
+    <div class="max-w-2xl mb-14 sm:mb-16">
+      <p data-reveal class="eyebrow mb-5" data-i18n="network.eyebrow">L'ENTREPRISE</p>
+      <h2 data-reveal class="text-3xl sm:text-4xl lg:text-5xl" data-i18n="network.title">Un acteur régional à <span class="hl-gold">portée mondiale</span></h2>
+      <p data-reveal class="text-muted mt-5 font-light text-base sm:text-lg" data-i18n="network.sub">Siège à Fada N'Gourma, Burkina Faso — des partenaires bancaires et commerciaux dans le monde entier.</p>
+    </div>
+
+    <div data-reveal class="grid grid-cols-1 sm:grid-cols-3 gap-px bg-[color:var(--line)] rounded-2xl overflow-hidden">
+      <div class="bg-ink p-7 sm:p-8"><div class="text-4xl sm:text-5xl font-semibold"><span class="counter" data-target="15">0</span>+</div><p class="text-sm text-muted mt-2 font-light" data-i18n="network.s1">Années d'activité</p></div>
+      <div class="bg-ink p-7 sm:p-8"><div class="text-4xl sm:text-5xl font-semibold"><span class="counter" data-target="5">0</span></div><p class="text-sm text-muted mt-2 font-light" data-i18n="network.s3">Filières</p></div>
+      <div class="bg-ink p-7 sm:p-8"><div class="text-4xl sm:text-5xl font-semibold"><span class="counter" data-target="8">0</span>+</div><p class="text-sm text-muted mt-2 font-light" data-i18n="network.s4">Banques correspondantes</p></div>
+    </div>
+
+    <!-- correspondent banking strip (factual, from KYC) -->
+    <div data-reveal class="mt-12 sm:mt-14">
+      <p class="text-center text-xs text-faint tracking-[.22em] uppercase mb-7" data-i18n="network.banks">Réseau de banques correspondantes</p>
+      <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-muted/80 text-sm sm:text-base font-medium">
+        <span>Citibank N.A.</span><span class="w-1 h-1 rounded-full bg-faint"></span>
+        <span>JP Morgan</span><span class="w-1 h-1 rounded-full bg-faint"></span>
+        <span>Ecobank</span><span class="w-1 h-1 rounded-full bg-faint"></span>
+        <span>Royal Bank of Canada</span><span class="w-1 h-1 rounded-full bg-faint"></span>
+        <span>Commerzbank</span><span class="w-1 h-1 rounded-full bg-faint"></span>
+        <span>UniCredit</span><span class="w-1 h-1 rounded-full bg-faint"></span>
+        <span>Standard Bank</span>
+      </div>
+    </div>
+
+    <div data-reveal class="mt-12 rounded-2xl border border-[color:var(--line)] px-6 py-6 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-muted" data-i18n="network.legal">
+      <span><span class="text-cream">RCCM</span> BF-FDG 2009 B38</span><span class="hidden sm:inline text-faint">·</span>
+      <span><span class="text-cream">IFU</span> 00026303 L</span><span class="hidden sm:inline text-faint">·</span>
+      <span><span class="text-cream">Forme juridique</span> Société Anonyme</span><span class="hidden sm:inline text-faint">·</span>
+      <span><span class="text-cream">Siège</span> Fada N'Gourma, Burkina Faso</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY MEGA ===================== -->
+<section id="why" class="sec border-t border-[color:var(--line)]">
+  <div class="wrap grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+    <div>
+      <p data-reveal class="eyebrow mb-5" data-i18n="why.eyebrow">POURQUOI MEGA ENERGIE</p>
+      <h2 data-reveal class="text-3xl sm:text-4xl lg:text-5xl mb-10" data-i18n="why.title">Une solidité sur laquelle compter.</h2>
+      <div class="space-y-px bg-[color:var(--line)] rounded-2xl overflow-hidden">
+        <div data-reveal class="bg-ink p-6 sm:p-7 flex gap-5">
+          <svg class="shrink-0 mt-1" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D9A53A" stroke-width="1.5"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+          <div><h3 class="text-lg mb-1 font-semibold" data-i18n="why.i1.t">Fiabilité sous pression</h3>
+          <p class="text-sm text-muted font-light leading-relaxed" data-i18n="why.i1.p">Quand les marchés bougent, nos cargaisons arrivent.</p></div>
+        </div>
+        <div data-reveal class="bg-ink p-6 sm:p-7 flex gap-5">
+          <svg class="shrink-0 mt-1" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2FB264" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+          <div><h3 class="text-lg mb-1 font-semibold" data-i18n="why.i2.t">Racines régionales, liens mondiaux</h3>
+          <p class="text-sm text-muted font-light leading-relaxed" data-i18n="why.i2.p">Une présence forte en Afrique de l'Ouest, reliée à l'international.</p></div>
+        </div>
+        <div data-reveal class="bg-ink p-6 sm:p-7 flex gap-5">
+          <svg class="shrink-0 mt-1" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D9A53A" stroke-width="1.5"><path d="M20 7 9 18l-5-5"/></svg>
+          <div><h3 class="text-lg mb-1 font-semibold" data-i18n="why.i3.t">La conformité d'abord</h3>
+          <p class="text-sm text-muted font-light leading-relaxed" data-i18n="why.i3.p">Des normes KYC et réglementaires rigoureuses protègent chaque opération.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div data-reveal class="panel rounded-2xl p-7 sm:p-9">
+      <p class="eyebrow mb-7" data-i18n="why.how">NOTRE MÉTHODE</p>
+      <ol class="space-y-7">
+        <li class="flex gap-5"><span class="text-2xl font-semibold text-gold w-8 shrink-0">01</span>
+          <div><h4 class="text-lg font-semibold" data-i18n="why.st1.t">Sourcer &amp; tarifer</h4><p class="text-sm text-muted font-light mt-1" data-i18n="why.st1.p">Nous sécurisons l'offre et la tarifons face aux marchés en temps réel.</p></div></li>
+        <li class="flex gap-5"><span class="text-2xl font-semibold text-gold w-8 shrink-0">02</span>
+          <div><h4 class="text-lg font-semibold" data-i18n="why.st2.t">Financer &amp; sécuriser</h4><p class="text-sm text-muted font-light mt-1" data-i18n="why.st2.p">Le financement et la conformité verrouillent l'opération.</p></div></li>
+        <li class="flex gap-5"><span class="text-2xl font-semibold text-gold w-8 shrink-0">03</span>
+          <div><h4 class="text-lg font-semibold" data-i18n="why.st3.t">Transporter &amp; livrer</h4><p class="text-sm text-muted font-light mt-1" data-i18n="why.st3.p">Nous acheminons et livrons aux spécifications, documentée.</p></div></li>
+        <li class="flex gap-5"><span class="text-2xl font-semibold text-greengold w-8 shrink-0">04</span>
+          <div><h4 class="text-lg font-semibold" data-i18n="why.st4.t">Partenariat &amp; croissance</h4><p class="text-sm text-muted font-light mt-1" data-i18n="why.st4.p">Nous bâtissons des relations durables.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="sec border-t border-[color:var(--line)]">
+  <div class="wrap max-w-5xl">
+    <div class="max-w-2xl mb-12 sm:mb-14">
+      <p data-reveal class="eyebrow mb-5" data-i18n="contact.eyebrow">CONTACT</p>
+      <h2 data-reveal class="text-3xl sm:text-5xl" data-i18n="contact.title"><span class="hl-green">Négocions</span> ensemble.</h2>
+      <p data-reveal class="text-muted mt-5 font-light text-base sm:text-lg" data-i18n="contact.sub">Dites-nous ce que vous souhaitez sourcer, financer, transporter ou approvisionner.</p>
+    </div>
+
+    <div data-reveal class="grid lg:grid-cols-5 gap-10 lg:gap-12">
+      <form class="lg:col-span-3 grid sm:grid-cols-2 gap-5" onsubmit="event.preventDefault(); this.reset(); document.getElementById('formMsg').classList.remove('hidden');">
+        <div><label for="f-name" data-i18n="form.name">Nom complet</label>
+          <input id="f-name" required data-i18n-ph="form.name.ph" class="field" placeholder="Jean Dupont"></div>
+        <div><label for="f-co" data-i18n="form.company">Société</label>
+          <input id="f-co" data-i18n-ph="form.company.ph" class="field" placeholder="Société SARL"></div>
+        <div><label for="f-email" data-i18n="form.email">E-mail</label>
+          <input id="f-email" type="email" required class="field" placeholder="email@exemple.com"></div>
+        <div><label for="f-comm" data-i18n="form.commodity">Produit concerné</label>
+          <select id="f-comm" class="field text-cream">
+            <option data-i18n="trade.c1.t">Produits pétroliers</option><option data-i18n="trade.c2.t">Pétrole &amp; Gaz</option><option data-i18n="trade.c3.t">Or</option>
+            <option data-i18n="trade.c4.t">Riz</option><option data-i18n="trade.c5.t">Sucre</option><option data-i18n="trade.c6.t">Transport &amp; Logistique</option><option data-i18n="form.other">Autre</option>
+          </select></div>
+        <div class="sm:col-span-2"><label for="f-msg" data-i18n="form.message">Message</label>
+          <textarea id="f-msg" rows="4" data-i18n-ph="form.message.ph" class="field resize-none" placeholder="Volume, itinéraire, échéance…"></textarea></div>
+        <div class="sm:col-span-2 flex flex-col sm:flex-row sm:items-center gap-4">
+          <button type="submit" class="btn btn-gold w-full sm:w-auto" data-i18n="form.send">Envoyer la demande</button>
+          <span id="formMsg" class="hidden text-sm text-emerald" data-i18n="form.ok">✓ Merci — notre équipe vous recontacte très vite.</span>
+        </div>
+      </form>
+
+      <div class="lg:col-span-2 lg:border-l border-[color:var(--line)] lg:pl-12 flex flex-col gap-7">
+        <div class="flex items-center gap-3">
+          <img src="logo-mark.png" alt="MEGA ENERGIE SA" class="h-10 w-auto">
+          <div><div class="text-base font-bold text-greengold leading-none">MEGA</div><div class="text-[9px] tracking-[.3em] text-gold font-semibold mt-0.5">ENERGIE SA</div></div>
+        </div>
+        <div><p class="text-xs text-faint mb-1.5" data-i18n="contact.email">E-mail</p>
+          <a href="mailto:directionmegaenergie.bf@gmail.com" class="text-cream hover:text-gold transition break-all">directionmegaenergie.bf@gmail.com</a></div>
+        <div><p class="text-xs text-faint mb-1.5" data-i18n="contact.phone">Téléphone</p>
+          <p class="text-cream leading-relaxed">+226 67 44 44 67<br>+226 61 44 44 67<br>+229 01 93 49 28 10</p></div>
+        <div><p class="text-xs text-faint mb-1.5" data-i18n="contact.hq">Siège social</p>
+          <p class="text-cream leading-relaxed">Sect. 01, Parcelle 01, Lot 05, Section BT<br>Fada N'Gourma · 01 BP 216<br>Burkina Faso</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="border-t border-[color:var(--line)] pt-14 pb-10">
+  <div class="wrap grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div class="sm:col-span-2 lg:col-span-1">
+      <div class="flex items-center gap-3 mb-4">
+        <img src="logo-mark.png" alt="MEGA ENERGIE SA" class="h-10 w-auto">
+        <div><div class="text-base font-bold text-greengold leading-none">MEGA</div><div class="text-[9px] tracking-[.3em] text-gold font-semibold mt-0.5">ENERGIE SA</div></div>
+      </div>
+      <p class="text-sm text-muted max-w-xs font-light" data-i18n="footer.tagline">Énergie, matières premières &amp; logistique — au service de l'Afrique de l'Ouest depuis 2009.</p>
+    </div>
+    <div>
+      <h4 class="text-sm font-semibold mb-4" data-i18n="footer.h1">Entreprise</h4>
+      <ul class="space-y-2.5 text-sm text-muted font-light">
+        <li><a href="#about" class="hover:text-gold transition" data-i18n="nav.about">À propos</a></li>
+        <li><a href="#why" class="hover:text-gold transition" data-i18n="nav.why">Pourquoi MEGA</a></li>
+        <li><a href="#network" class="hover:text-gold transition" data-i18n="nav.company">L'entreprise</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-sm font-semibold mb-4" data-i18n="footer.h2">Activités</h4>
+      <ul class="space-y-2.5 text-sm text-muted font-light">
+        <li><a href="#trade" class="hover:text-gold transition" data-i18n="nav.trade">Nos activités</a></li>
+        <li><a href="#services" class="hover:text-gold transition" data-i18n="nav.services">Savoir-faire</a></li>
+        <li><a href="#contact" class="hover:text-gold transition" data-i18n="nav.cta">Demander un devis</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-sm font-semibold mb-4" data-i18n="footer.h3">Contact</h4>
+      <ul class="space-y-2.5 text-sm text-muted font-light">
+        <li><a href="mailto:directionmegaenergie.bf@gmail.com" class="hover:text-gold transition break-all">directionmegaenergie.bf@gmail.com</a></li>
+        <li>+226 67 44 44 67</li>
+        <li>Fada N'Gourma · Burkina Faso</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap mt-12 pt-8 border-t border-[color:var(--line)] flex flex-col sm:flex-row justify-between gap-4 text-xs text-faint">
+    <p>© <span id="yr">2026</span> MEGA ENERGIE SA · Société Anonyme. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
+    <p>RCCM BF-FDG 2009 B38 · IFU 00026303 L</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script>
+const I18N = {
+  fr: {
+    'nav.about':'À propos','nav.trade':'Nos activités','nav.services':'Savoir-faire','nav.company':'L’entreprise','nav.why':'Pourquoi MEGA','nav.cta':'Demander un devis',
+    'hero.eyebrow':'ÉNERGIE · MATIÈRES PREMIÈRES · LOGISTIQUE',
+    'hero.title':'Le négoce <span class="hl-green">à travers l’Afrique de l’Ouest</span> et au-delà.',
+    'hero.sub':'MEGA ENERGIE SA négocie et transporte des produits pétroliers, du pétrole &amp; gaz, de l’or, du riz et du sucre — reliant le Burkina Faso et la région aux marchés mondiaux depuis 2009.',
+    'hero.tagline':'« L’énergie en mouvement. »','hero.cta1':'Démarrer un échange','hero.cta2':'Nos produits',
+    'hero.stat1':'Création','hero.stat2':'FCFA de capital','hero.stat3':'Filières',
+    'marquee':'<span>Produits pétroliers</span><span class="w-1 h-1 rounded-full bg-gold/60"></span><span>Pétrole &amp; Gaz</span><span class="w-1 h-1 rounded-full bg-gold/60"></span><span>Or</span><span class="w-1 h-1 rounded-full bg-gold/60"></span><span>Riz</span><span class="w-1 h-1 rounded-full bg-gold/60"></span><span>Sucre</span><span class="w-1 h-1 rounded-full bg-gold/60"></span><span>Transport &amp; Logistique</span><span class="w-1 h-1 rounded-full bg-gold/60"></span>',
+    'about.eyebrow':'QUI SOMMES-NOUS',
+    'about.title':'Une maison de négoce burkinabè bâtie sur la <span class="hl-gold">confiance</span> et le <span class="hl-green">mouvement</span>.',
+    'about.p1':'Fondée en 2009 à Fada N’Gourma, MEGA ENERGIE SA a démarré dans la distribution de produits pétroliers avant de devenir un groupe diversifié de négoce et de logistique — traitant le pétrole &amp; gaz, l’or, le riz et le sucre, et les acheminant avec fiabilité à travers le Burkina Faso et l’Afrique de l’Ouest.',
+    'about.p2':'Avec un réseau de banques correspondantes en Europe, en Amérique du Nord et au-delà, nous relions l’offre régionale aux marchés mondiaux — sous une seule responsabilité, de l’approvisionnement à la livraison.',
+    'about.lead':'Dirigée par <span class="text-cream">Samuel Ouoba</span> (Directeur Général) et <span class="text-cream">Comlan Fréjus Victor Amoussou</span> (Directeur Général Adjoint).',
+    'about.badge.t':'Depuis 2009','about.badge.p':'Née à Fada N’Gourma. De confiance dans toute la région.',
+    'about.v1.t':'Intégrité','about.v1.p':'Chaque contrat honoré. Chaque cargaison maîtrisée.',
+    'about.v2.t':'Vision','about.v2.p':'Diversifiée, régionale et pensée pour durer.',
+    'trade.eyebrow':'PORTEFEUILLE','trade.title':'Ce que nous <span class="hl-gold">négocions</span> &amp; transportons',
+    'trade.sub':'Cinq filières, un seul opérateur responsable — sourcées, financées, transportées et livrées.',
+    'trade.c1.t':'Produits pétroliers','trade.c1.p':'Gasoil, diesel et carburants — distribués aux spécifications, dans les délais.',
+    'trade.c2.t':'Pétrole &amp; Gaz','trade.c2.p':'Négoce, approvisionnement et enlèvement de brut et de gaz sur les marchés majeurs et régionaux.',
+    'trade.c3.t':'Or','trade.c3.p':'Sourcing et négoce de métaux précieux, avec conformité et traçabilité rigoureuses.',
+    'trade.c4.t':'Riz','trade.c4.p':'Négoce et distribution agricoles en gros, pour les marchés de denrées de base.',
+    'trade.c5.t':'Sucre','trade.c5.p':'Import, négoce et distribution de sucre à travers les chaînes d’approvisionnement régionales.',
+    'trade.c6.t':'Transport &amp; Logistique','trade.c6.p':'Transport routier et en vrac qui achemine chaque produit jusqu’au dernier kilomètre.',
+    'services.eyebrow':'SAVOIR-FAIRE','services.title':'Toute la chaîne, <span class="hl-green">de bout en bout</span>',
+    'services.c1.t':'Négoce &amp; Approvisionnement','services.c1.p':'Sourcing et tarification compétitifs, lignes d’approvisionnement sécurisées.',
+    'services.c2.t':'Transport &amp; Logistique','services.c2.p':'Transport routier et en vrac, affrété et suivi jusqu’à destination finale.',
+    'services.c3.t':'Stockage &amp; Distribution','services.c3.p':'Des réseaux de distribution fiables qui maintiennent un approvisionnement stable.',
+    'services.c4.t':'Conformité &amp; Financement','services.c4.p':'Financement du négoce, KYC et conformité réglementaire complète.',
+    'network.eyebrow':'L’ENTREPRISE','network.title':'Un acteur régional à <span class="hl-gold">portée mondiale</span>',
+    'network.sub':'Siège à Fada N’Gourma, Burkina Faso — des partenaires bancaires et commerciaux dans le monde entier.',
+    'network.s1':'Années d’activité','network.s2':'FCFA de capital','network.s3':'Filières','network.s4':'Banques correspondantes',
+    'network.banks':'Réseau de banques correspondantes',
+    'network.legal':'<span><span class="text-cream">RCCM</span> BF-FDG 2009 B38</span><span class="hidden sm:inline text-faint">·</span><span><span class="text-cream">IFU</span> 00026303 L</span><span class="hidden sm:inline text-faint">·</span><span><span class="text-cream">Forme juridique</span> Société Anonyme</span><span class="hidden sm:inline text-faint">·</span><span><span class="text-cream">Siège</span> Fada N’Gourma, Burkina Faso</span>',
+    'why.eyebrow':'POURQUOI MEGA ENERGIE','why.title':'Une solidité sur laquelle compter.',
+    'why.i1.t':'Fiabilité sous pression','why.i1.p':'Quand les marchés bougent, nos cargaisons arrivent. La continuité opérationnelle est notre promesse.',
+    'why.i2.t':'Racines régionales, liens mondiaux','why.i2.p':'Une présence forte en Afrique de l’Ouest, reliée à des partenaires internationaux.',
+    'why.i3.t':'La conformité d’abord','why.i3.p':'Des normes KYC et réglementaires rigoureuses protègent chaque transaction et chaque partenaire.',
+    'why.how':'NOTRE MÉTHODE',
+    'why.st1.t':'Sourcer &amp; tarifer','why.st1.p':'Nous sécurisons l’offre et la tarifons face aux marchés en temps réel.',
+    'why.st2.t':'Financer &amp; sécuriser','why.st2.p':'Le financement du négoce et la conformité verrouillent l’opération.',
+    'why.st3.t':'Transporter &amp; livrer','why.st3.p':'Nous acheminons la cargaison et livrons aux spécifications, entièrement documentée.',
+    'why.st4.t':'Partenariat &amp; croissance','why.st4.p':'Nous bâtissons des relations durables, pas des opérations ponctuelles.',
+    'contact.eyebrow':'CONTACT','contact.title':'<span class="hl-green">Négocions</span> ensemble.',
+    'contact.sub':'Dites-nous ce que vous souhaitez sourcer, financer, transporter ou approvisionner — notre équipe vous répond rapidement.',
+    'form.name':'Nom complet','form.name.ph':'Jean Dupont','form.company':'Société','form.company.ph':'Société SARL',
+    'form.email':'E-mail','form.commodity':'Produit concerné','form.other':'Autre','form.message':'Message','form.message.ph':'Volume, itinéraire, échéance…',
+    'form.send':'Envoyer la demande','form.ok':'✓ Merci — notre équipe vous recontacte très vite.',
+    'contact.email':'E-mail','contact.phone':'Téléphone','contact.hq':'Siège social',
+    'footer.tagline':'Énergie, matières premières &amp; logistique — au service de l’Afrique de l’Ouest depuis 2009.',
+    'footer.h1':'Entreprise','footer.h2':'Activités','footer.h3':'Contact','footer.rights':'Tous droits réservés.',
+  },
+  en: {
+    'nav.about':'About','nav.trade':'What We Trade','nav.services':'Capabilities','nav.company':'Company','nav.why':'Why MEGA','nav.cta':'Request a Quote',
+    'hero.eyebrow':'ENERGY · COMMODITIES · LOGISTICS',
+    'hero.title':'Trade <span class="hl-green">across West Africa</span> and beyond.',
+    'hero.sub':'MEGA ENERGIE SA trades and transports petroleum products, oil &amp; gas, gold, rice and sugar — connecting Burkina Faso and the region to global markets since 2009.',
+    'hero.tagline':'“ Energy in motion. ”','hero.cta1':'Start a Conversation','hero.cta2':'Our Commodities',
+    'hero.stat1':'Established','hero.stat2':'FCFA share capital','hero.stat3':'Commodity lines',
+    'marquee':'<span>Petroleum Products</span><span class="w-1 h-1 rounded-full bg-gold/60"></span><span>Oil &amp; Gas</span><span class="w-1 h-1 rounded-full bg-gold/60"></span><span>Gold</span><span class="w-1 h-1 rounded-full bg-gold/60"></span><span>Rice</span><span class="w-1 h-1 rounded-full bg-gold/60"></span><span>Sugar</span><span class="w-1 h-1 rounded-full bg-gold/60"></span><span>Transport &amp; Logistics</span><span class="w-1 h-1 rounded-full bg-gold/60"></span>',
+    'about.eyebrow':'WHO WE ARE',
+    'about.title':'A Burkinabè commodity house built on <span class="hl-gold">trust</span> and <span class="hl-green">movement</span>.',
+    'about.p1':'Founded in 2009 in Fada N’Gourma, MEGA ENERGIE SA began in the distribution of petroleum products and grew into a diversified trading and logistics group — handling oil &amp; gas, gold, rice and sugar, and moving them reliably across Burkina Faso and West Africa.',
+    'about.p2':'With a correspondent banking network reaching Europe, North America and beyond, we connect regional supply to global markets — under one accountable roof, from sourcing to delivery.',
+    'about.lead':'Led by <span class="text-cream">Samuel Ouoba</span> (Directeur Général) and <span class="text-cream">Comlan Fréjus Victor Amoussou</span> (Directeur Général Adjoint).',
+    'about.badge.t':'Since 2009','about.badge.p':'Built in Fada N’Gourma. Trusted across the region.',
+    'about.v1.t':'Integrity','about.v1.p':'Every contract honoured. Every cargo accounted for.',
+    'about.v2.t':'Vision','about.v2.p':'Diversified, regional, and built for the long term.',
+    'trade.eyebrow':'PORTFOLIO','trade.title':'What we <span class="hl-gold">trade</span> &amp; move',
+    'trade.sub':'Five commodity lines, one accountable operator — sourced, financed, transported and delivered.',
+    'trade.c1.t':'Petroleum Products','trade.c1.p':'Gasoil, diesel and fuels — distributed and supplied to specification, on schedule.',
+    'trade.c2.t':'Oil &amp; Gas','trade.c2.p':'Crude and gas trading, supply and offtake across major and regional markets.',
+    'trade.c3.t':'Gold','trade.c3.p':'Sourcing and trading of precious metals with rigorous compliance and provenance.',
+    'trade.c4.t':'Rice','trade.c4.p':'Bulk agricultural trade and distribution, supplying staple food markets reliably.',
+    'trade.c5.t':'Sugar','trade.c5.p':'Import, trade and distribution of sugar across regional supply chains.',
+    'trade.c6.t':'Transport &amp; Logistics','trade.c6.p':'Road and bulk transport that moves every commodity to the last mile.',
+    'services.eyebrow':'CAPABILITIES','services.title':'The full chain, <span class="hl-green">end to end</span>',
+    'services.c1.t':'Trading &amp; Supply','services.c1.p':'Sourcing and pricing commodities competitively, with secure supply lines.',
+    'services.c2.t':'Transport &amp; Logistics','services.c2.p':'Road and bulk transport, chartered and tracked to the final destination.',
+    'services.c3.t':'Storage &amp; Distribution','services.c3.p':'Reliable distribution networks that keep supply steady across the region.',
+    'services.c4.t':'Compliance &amp; Finance','services.c4.p':'Trade finance, KYC and full regulatory compliance protecting every deal.',
+    'network.eyebrow':'THE COMPANY','network.title':'A regional operator with <span class="hl-gold">global reach</span>',
+    'network.sub':'Headquartered in Fada N’Gourma, Burkina Faso — banking and trading partners worldwide.',
+    'network.s1':'Years in operation','network.s2':'FCFA share capital','network.s3':'Commodity verticals','network.s4':'Correspondent banks',
+    'network.banks':'Correspondent banking network',
+    'network.legal':'<span><span class="text-cream">RCCM</span> BF-FDG 2009 B38</span><span class="hidden sm:inline text-faint">·</span><span><span class="text-cream">IFU</span> 00026303 L</span><span class="hidden sm:inline text-faint">·</span><span><span class="text-cream">Legal form</span> Public Limited Company (SA)</span><span class="hidden sm:inline text-faint">·</span><span><span class="text-cream">Head office</span> Fada N’Gourma, Burkina Faso</span>',
+    'why.eyebrow':'WHY MEGA ENERGIE','why.title':'Strength you can trade on.',
+    'why.i1.t':'Reliability under pressure','why.i1.p':'When markets move, our cargoes still arrive. Operational continuity is our promise.',
+    'why.i2.t':'Regional roots, global links','why.i2.p':'Deep presence in West Africa, connected to international banking and trade partners.',
+    'why.i3.t':'Compliance first','why.i3.p':'Rigorous KYC and regulatory standards safeguard every transaction and partner.',
+    'why.how':'HOW WE WORK',
+    'why.st1.t':'Source &amp; price','why.st1.p':'We secure supply and price it competitively against live markets.',
+    'why.st2.t':'Finance &amp; secure','why.st2.p':'Trade finance and compliance lock the deal in safely.',
+    'why.st3.t':'Transport &amp; deliver','why.st3.p':'We move the cargo and deliver on-spec, fully documented.',
+    'why.st4.t':'Partner &amp; grow','why.st4.p':'We build long-term relationships, not one-off transactions.',
+    'contact.eyebrow':'CONTACT','contact.title':'Let’s trade <span class="hl-green">together</span>.',
+    'contact.sub':'Tell us what you need to source, finance, transport or supply — our team responds promptly.',
+    'form.name':'Full name','form.name.ph':'Jane Doe','form.company':'Company','form.company.ph':'Company Ltd.',
+    'form.email':'Email','form.commodity':'Commodity of interest','form.other':'Other','form.message':'Message','form.message.ph':'Volume, route, timeframe…',
+    'form.send':'Send Enquiry','form.ok':'✓ Thank you — our team will be in touch shortly.',
+    'contact.email':'Email','contact.phone':'Phone','contact.hq':'Headquarters',
+    'footer.tagline':'Energy, commodities &amp; logistics — moving West Africa forward since 2009.',
+    'footer.h1':'Company','footer.h2':'Business','footer.h3':'Get in touch','footer.rights':'All rights reserved.',
+  }
+};
+
+(function(){
+  const yr=document.getElementById('yr'); if(yr) yr.textContent=new Date().getFullYear();
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* language */
+  const langBtns=document.querySelectorAll('[data-lang]');
+  function setLang(l){
+    if(!I18N[l]) l='fr';
+    document.documentElement.lang=l;
+    document.querySelectorAll('[data-i18n]').forEach(el=>{ const v=I18N[l][el.dataset.i18n]; if(v!=null) el.innerHTML=v; });
+    document.querySelectorAll('[data-i18n-ph]').forEach(el=>{ const v=I18N[l][el.dataset.i18nPh]; if(v!=null) el.setAttribute('placeholder', v.replace(/&amp;/g,'&')); });
+    langBtns.forEach(b=> b.classList.toggle('active', b.dataset.lang===l));
+    try{ localStorage.setItem('lang',l); }catch(e){}
+  }
+  langBtns.forEach(b=> b.addEventListener('click',()=> setLang(b.dataset.lang)));
+  let initial='fr'; try{ initial=localStorage.getItem('lang')||'fr'; }catch(e){}
+  setLang(initial);
+
+  /* mobile menu */
+  const sheet=document.getElementById('msheet'), burger=document.getElementById('burger'), mclose=document.getElementById('mclose');
+  let lenis=null;
+  function openMenu(){ sheet.classList.remove('closed'); document.body.style.overflow='hidden'; if(lenis) lenis.stop(); }
+  function closeMenu(){ sheet.classList.add('closed'); document.body.style.overflow=''; if(lenis) lenis.start(); }
+  burger.addEventListener('click', openMenu); mclose.addEventListener('click', closeMenu);
+  sheet.querySelectorAll('a').forEach(a=> a.addEventListener('click', closeMenu));
+
+  /* nav scrolled + progress */
+  const nav=document.getElementById('nav'), prog=document.getElementById('progress');
+  function onScroll(y){
+    nav.classList.toggle('scrolled', y>30);
+    const h=document.documentElement.scrollHeight-window.innerHeight;
+    prog.style.width=(h>0? (y/h*100):0)+'%';
+  }
+
+  /* scrollspy */
+  const spy=[...document.querySelectorAll('[data-spy]')];
+  const secs=spy.map(a=> document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  function updateSpy(){
+    const mid=window.scrollY+window.innerHeight*0.35; let idx=-1;
+    secs.forEach((s,i)=>{ if(s.offsetTop<=mid) idx=i; });
+    spy.forEach((a,i)=> a.classList.toggle('active', i===idx));
+  }
+
+  if(reduce){
+    window.addEventListener('scroll',()=>{ onScroll(window.scrollY); updateSpy(); });
+    document.querySelectorAll('.counter').forEach(el=> el.textContent=el.dataset.target);
+    onScroll(0); updateSpy(); return;
+  }
+
+  lenis=new Lenis({ duration:1.05, easing:t=>Math.min(1,1.001-Math.pow(2,-10*t)) });
+  function raf(t){ lenis.raf(t); requestAnimationFrame(raf); } requestAnimationFrame(raf);
+  lenis.on('scroll',({scroll})=>{ onScroll(scroll); updateSpy(); });
+
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',e=>{ const t=document.querySelector(a.getAttribute('href')); if(t){ e.preventDefault(); lenis.scrollTo(t,{offset:-64}); } });
+  });
+
+  gsap.registerPlugin(ScrollTrigger);
+  lenis.on('scroll', ScrollTrigger.update);
+
+  gsap.set('[data-hero]',{opacity:0,y:34}); gsap.set('[data-hero-mark]',{opacity:0,scale:.9});
+  gsap.timeline({defaults:{ease:'power3.out'}})
+    .to('[data-hero]',{opacity:1,y:0,duration:.95,stagger:.1},.1)
+    .to('[data-hero-mark]',{opacity:1,scale:1,duration:1.2,ease:'expo.out'},.15);
+
+  document.querySelectorAll('[data-reveal]').forEach(el=>{
+    ScrollTrigger.create({ trigger:el, start:'top 88%', onEnter:()=> el.classList.add('in') });
+  });
+  gsap.to('[data-hero-mark]',{ y:70, ease:'none', scrollTrigger:{trigger:'#top',start:'top top',end:'bottom top',scrub:true} });
+
+  document.querySelectorAll('.counter').forEach(el=>{
+    const target=+el.dataset.target;
+    ScrollTrigger.create({ trigger:el, start:'top 92%', once:true, onEnter:()=>{
+      const o={v:0}; gsap.to(o,{v:target,duration:1.6,ease:'power2.out',onUpdate:()=> el.textContent=Math.round(o.v)});
+    }});
+  });
+
+  onScroll(0); updateSpy();
+})();
+</script>
+</body>
+</html>
