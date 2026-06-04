@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Demander un devis — MEGA ENERGIE SA</title>
+<meta name="description" content="Contactez MEGA ENERGIE SA pour sourcer, financer, transporter ou approvisionner vos matières premières. Fada N'Gourma, Burkina Faso." />
+<script>document.documentElement.className=document.documentElement.className.replace('no-js','js');</script>
+<link rel="icon" type="image/png" href="logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{ink:{DEFAULT:'#070908',900:'#070908',800:'#0C0F0E',700:'#111614'},gold:{DEFAULT:'#D9A53A',soft:'#E7B85A',deep:'#A87C22'},emerald:{DEFAULT:'#2FB264',soft:'#46C97C'},cream:'#F3F5F3',muted:'#8C968F',faint:'#5C655F'},fontFamily:{sans:['-apple-system','BlinkMacSystemFont','"SF Pro Display"','Inter','"Segoe UI"','Roboto','sans-serif']}}}}</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="contact">
+<div id="progress"></div>
+<div id="nav-mount"></div>
+
+<main>
+<section class="page-head">
+  <div class="wrap">
+    <p data-reveal class="eyebrow mb-5" data-i18n="contact.eyebrow">CONTACT</p>
+    <h1 data-reveal class="text-4xl sm:text-5xl lg:text-6xl max-w-4xl" data-i18n="contact.title"><span class="hl-green">Négocions</span> ensemble.</h1>
+    <p data-reveal class="text-muted mt-6 max-w-2xl font-light text-lg" data-i18n="contact.sub">Dites-nous ce que vous souhaitez sourcer, financer, transporter ou approvisionner — notre équipe vous répond rapidement.</p>
+  </div>
+</section>
+
+<section class="pb-20 sm:pb-28 lg:pb-32">
+  <div class="wrap max-w-5xl grid lg:grid-cols-5 gap-10 lg:gap-12">
+    <form data-reveal class="lg:col-span-3 grid sm:grid-cols-2 gap-5" onsubmit="event.preventDefault(); this.reset(); document.getElementById('formMsg').classList.remove('hidden');">
+      <div><label for="f-name" data-i18n="form.name">Nom complet</label><input id="f-name" required data-i18n-ph="form.name.ph" class="field" placeholder="Jean Dupont"></div>
+      <div><label for="f-co" data-i18n="form.company">Société</label><input id="f-co" data-i18n-ph="form.company.ph" class="field" placeholder="Société SARL"></div>
+      <div><label for="f-email" data-i18n="form.email">E-mail</label><input id="f-email" type="email" required class="field" placeholder="email@exemple.com"></div>
+      <div><label for="f-comm" data-i18n="form.commodity">Produit concerné</label>
+        <select id="f-comm" class="field text-cream">
+          <option data-i18n="trade.c1.t">Produits pétroliers</option><option data-i18n="trade.c2.t">Pétrole &amp; Gaz</option><option data-i18n="trade.c3.t">Or</option>
+          <option data-i18n="trade.c4.t">Riz</option><option data-i18n="trade.c5.t">Sucre</option><option data-i18n="trade.c6.t">Transport &amp; Logistique</option><option data-i18n="form.other">Autre</option>
+        </select></div>
+      <div class="sm:col-span-2"><label for="f-msg" data-i18n="form.message">Message</label><textarea id="f-msg" rows="4" data-i18n-ph="form.message.ph" class="field resize-none" placeholder="Volume, itinéraire, échéance…"></textarea></div>
+      <div class="sm:col-span-2 flex flex-col sm:flex-row sm:items-center gap-4">
+        <button type="submit" class="btn btn-gold w-full sm:w-auto" data-i18n="form.send">Envoyer la demande</button>
+        <span id="formMsg" class="hidden text-sm text-emerald" data-i18n="form.ok">✓ Merci — notre équipe vous recontacte très vite.</span>
+      </div>
+    </form>
+
+    <div data-reveal class="lg:col-span-2 lg:border-l border-[color:var(--line)] lg:pl-12 flex flex-col gap-7">
+      <div class="flex items-center gap-3">
+        <img src="logo-mark.png" alt="MEGA ENERGIE SA" class="h-10 w-auto">
+        <div><div class="text-base font-bold text-greengold leading-none">MEGA</div><div class="text-[9px] tracking-[.3em] text-gold font-semibold mt-0.5">ENERGIE SA</div></div>
+      </div>
+      <div><p class="text-xs text-faint mb-1.5" data-i18n="contact.email">E-mail</p><a href="mailto:directionmegaenergie.bf@gmail.com" class="text-cream hover:text-gold transition break-all">directionmegaenergie.bf@gmail.com</a></div>
+      <div><p class="text-xs text-faint mb-1.5" data-i18n="contact.phone">Téléphone</p><p class="text-cream leading-relaxed">+226 67 44 44 67<br>+226 61 44 44 67<br>+229 01 93 49 28 10</p></div>
+      <div><p class="text-xs text-faint mb-1.5" data-i18n="contact.hq">Siège social</p><p class="text-cream leading-relaxed">Sect. 01, Parcelle 01, Lot 05, Section BT<br>Fada N'Gourma · 01 BP 216<br>Burkina Faso</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<div id="footer-mount"></div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

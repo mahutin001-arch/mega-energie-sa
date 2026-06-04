@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>À propos — MEGA ENERGIE SA</title>
+<meta name="description" content="MEGA ENERGIE SA, maison de négoce burkinabè fondée en 2009 à Fada N'Gourma : énergie, matières premières et logistique." />
+<script>document.documentElement.className=document.documentElement.className.replace('no-js','js');</script>
+<link rel="icon" type="image/png" href="logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{ink:{DEFAULT:'#070908',900:'#070908',800:'#0C0F0E',700:'#111614'},gold:{DEFAULT:'#D9A53A',soft:'#E7B85A',deep:'#A87C22'},emerald:{DEFAULT:'#2FB264',soft:'#46C97C'},cream:'#F3F5F3',muted:'#8C968F',faint:'#5C655F'},fontFamily:{sans:['-apple-system','BlinkMacSystemFont','"SF Pro Display"','Inter','"Segoe UI"','Roboto','sans-serif']}}}}</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="about">
+<div id="progress"></div>
+<div id="nav-mount"></div>
+
+<main>
+<section class="page-head">
+  <div class="wrap">
+    <p data-reveal class="eyebrow mb-5" data-i18n="about.eyebrow">QUI SOMMES-NOUS</p>
+    <h1 data-reveal class="text-4xl sm:text-5xl lg:text-6xl max-w-4xl" data-i18n="about.title">Une maison de négoce burkinabè bâtie sur la <span class="hl-gold">confiance</span> et le <span class="hl-green">mouvement</span>.</h1>
+  </div>
+</section>
+
+<section class="pb-20 sm:pb-28 lg:pb-32">
+  <div class="wrap grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <div data-reveal class="lg:col-span-5 order-2 lg:order-1">
+      <div class="panel rounded-2xl p-1.5">
+        <div class="rounded-xl overflow-hidden bg-ink-800 aspect-[4/5] relative grid place-items-center">
+          <img src="logo-full.png" alt="MEGA ENERGIE SA" class="w-48 sm:w-56 h-auto relative float-y">
+          <div class="absolute bottom-5 left-5 right-5 bg-ink-900/70 backdrop-blur-md border border-[color:var(--line)] rounded-xl p-5">
+            <div class="text-gold text-xl font-semibold" data-i18n="about.badge.t">Depuis 2009</div>
+            <p class="text-sm text-muted mt-1 font-light" data-i18n="about.badge.p">Née à Fada N'Gourma. De confiance dans toute la région.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lg:col-span-7 order-1 lg:order-2">
+      <p data-reveal class="text-muted leading-relaxed mb-5 font-light text-base sm:text-lg" data-i18n="about.p1">Fondée en 2009 à Fada N'Gourma, MEGA ENERGIE SA a démarré dans la distribution de produits pétroliers avant de devenir un groupe diversifié de négoce et de logistique.</p>
+      <p data-reveal class="text-muted leading-relaxed mb-7 font-light text-base sm:text-lg" data-i18n="about.p2">Avec un réseau de banques correspondantes en Europe, en Amérique du Nord et au-delà, nous relions l'offre régionale aux marchés mondiaux.</p>
+      <p data-reveal class="text-sm text-faint mb-9" data-i18n="about.lead">Dirigée par <span class="text-cream">Samuel Ouoba</span> (Directeur Général) et <span class="text-cream">Comlan Fréjus Victor Amoussou</span> (Directeur Général Adjoint).</p>
+      <div class="grid sm:grid-cols-2 gap-px bg-[color:var(--line)] rounded-2xl overflow-hidden">
+        <div data-reveal class="bg-ink p-6"><div class="text-gold text-xl font-semibold mb-2" data-i18n="about.v1.t">Intégrité</div><p class="text-sm text-muted font-light" data-i18n="about.v1.p">Chaque contrat honoré. Chaque cargaison maîtrisée.</p></div>
+        <div data-reveal class="bg-ink p-6"><div class="text-greengold text-xl font-semibold mb-2" data-i18n="about.v2.t">Vision</div><p class="text-sm text-muted font-light" data-i18n="about.v2.p">Diversifiée, régionale et pensée pour durer.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec border-t border-[color:var(--line)]">
+  <div class="wrap text-center max-w-2xl mx-auto">
+    <h2 data-reveal class="text-3xl sm:text-5xl" data-i18n="cta.title">Prêt à négocier ?</h2>
+    <p data-reveal class="text-muted mt-5 font-light text-base sm:text-lg" data-i18n="cta.sub">Notre équipe vous répond sous un jour ouvré.</p>
+    <div data-reveal class="mt-8"><a href="devis.html" class="btn btn-gold" data-i18n="nav.cta">Demander un devis</a></div>
+  </div>
+</section>
+</main>
+
+<div id="footer-mount"></div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
