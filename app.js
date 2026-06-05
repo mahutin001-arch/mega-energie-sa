@@ -188,7 +188,7 @@ const FOOTER_HTML = `
     <div>
       <h4 class="text-sm font-semibold mb-4" data-i18n="footer.h3">Contact</h4>
       <ul class="space-y-2.5 text-sm text-muted font-light">
-        <li><a href="mailto:directionmegaenergie.bf@gmail.com" class="hover:text-gold transition break-all">directionmegaenergie.bf@gmail.com</a></li>
+        <li><a href="mailto:direction@megaenergiesa.com" class="hover:text-gold transition break-all">direction@megaenergiesa.com</a></li>
         <li>+226 67 44 44 67</li>
         <li>Fada N’Gourma · Burkina Faso</li>
       </ul>
