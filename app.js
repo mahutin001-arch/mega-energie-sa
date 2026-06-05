@@ -15,7 +15,7 @@ const I18N = {
     'about.title':'Une maison de négoce burkinabè bâtie sur la <span class="hl-gold">confiance</span> et le <span class="hl-green">mouvement</span>.',
     'about.p1':'Fondée en 2009 à Fada N’Gourma, MEGA ENERGIE SA a démarré dans la distribution de produits pétroliers avant de devenir un groupe diversifié de négoce et de logistique — traitant le pétrole &amp; gaz, l’or, le riz et le sucre, et les acheminant avec fiabilité à travers le Burkina Faso et l’Afrique de l’Ouest.',
     'about.p2':'Avec un réseau de banques correspondantes en Europe, en Amérique du Nord et au-delà, nous relions l’offre régionale aux marchés mondiaux — sous une seule responsabilité, de l’approvisionnement à la livraison.',
-    'about.lead':'Dirigée par <span class="text-cream">Samuel Ouoba</span> (Directeur Général) et <span class="text-cream">Comlan Fréjus Victor Amoussou</span> (Directeur Général Adjoint).',
+    'about.lead':'Dirigée par <span class="text-cream">Samuel Ouoba</span> (Administrateur Général) et <span class="text-cream">Comlan Fréjus Victor Amoussou</span> (Administrateur Général Adjoint).',
     'about.badge.t':'Depuis 2009','about.badge.p':'Née à Fada N’Gourma. De confiance dans toute la région.',
     'about.v1.t':'Intégrité','about.v1.p':'Chaque contrat honoré. Chaque cargaison maîtrisée.',
     'about.v2.t':'Vision','about.v2.p':'Diversifiée, régionale et pensée pour durer.',
@@ -56,7 +56,7 @@ const I18N = {
     'contact.email':'E-mail','contact.phone':'Téléphone','contact.hq':'Siège social',
     'cta.title':'Prêt à négocier ?','cta.sub':'Notre équipe vous répond sous un jour ouvré.',
     'footer.tagline':'Énergie, matières premières &amp; logistique — au service de l’Afrique de l’Ouest depuis 2009.',
-    'footer.h1':'Entreprise','footer.h2':'Activités','footer.h3':'Contact','footer.rights':'Tous droits réservés.',
+    'footer.h1':'Entreprise','footer.h2':'Activités','footer.h3':'Contact','footer.rights':'Tous droits réservés.','footer.credits':'Crédits photos : Wikimedia Commons (CC BY-SA 4.0 / CC0).',
   },
   en: {
     'nav.home':'Home','nav.about':'About','nav.trade':'What We Trade','nav.services':'Capabilities','nav.company':'Company','nav.why':'Why MEGA','nav.cta':'Request a Quote',
@@ -73,7 +73,7 @@ const I18N = {
     'about.title':'A Burkinabè commodity house built on <span class="hl-gold">trust</span> and <span class="hl-green">movement</span>.',
     'about.p1':'Founded in 2009 in Fada N’Gourma, MEGA ENERGIE SA began in the distribution of petroleum products and grew into a diversified trading and logistics group — handling oil &amp; gas, gold, rice and sugar, and moving them reliably across Burkina Faso and West Africa.',
     'about.p2':'With a correspondent banking network reaching Europe, North America and beyond, we connect regional supply to global markets — under one accountable roof, from sourcing to delivery.',
-    'about.lead':'Led by <span class="text-cream">Samuel Ouoba</span> (Directeur Général) and <span class="text-cream">Comlan Fréjus Victor Amoussou</span> (Directeur Général Adjoint).',
+    'about.lead':'Led by <span class="text-cream">Samuel Ouoba</span> (Administrateur Général) and <span class="text-cream">Comlan Fréjus Victor Amoussou</span> (Administrateur Général Adjoint).',
     'about.badge.t':'Since 2009','about.badge.p':'Built in Fada N’Gourma. Trusted across the region.',
     'about.v1.t':'Integrity','about.v1.p':'Every contract honoured. Every cargo accounted for.',
     'about.v2.t':'Vision','about.v2.p':'Diversified, regional, and built for the long term.',
@@ -114,7 +114,7 @@ const I18N = {
     'contact.email':'Email','contact.phone':'Phone','contact.hq':'Headquarters',
     'cta.title':'Ready to trade?','cta.sub':'Our team responds within one business day.',
     'footer.tagline':'Energy, commodities &amp; logistics — moving West Africa forward since 2009.',
-    'footer.h1':'Company','footer.h2':'Business','footer.h3':'Get in touch','footer.rights':'All rights reserved.',
+    'footer.h1':'Company','footer.h2':'Business','footer.h3':'Get in touch','footer.rights':'All rights reserved.','footer.credits':'Photo credits: Wikimedia Commons (CC BY-SA 4.0 / CC0).',
   }
 };
 
@@ -196,6 +196,7 @@ const FOOTER_HTML = `
     <p>© <span id="yr">2026</span> MEGA ENERGIE SA · Société Anonyme. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
     <p>RCCM BF-FDG 2009 B38 · IFU 00026303 L</p>
   </div>
+  <div class="wrap mt-4 text-[11px] text-faint/70"><span data-i18n="footer.credits">Crédits photos : Wikimedia Commons (CC BY-SA 4.0 / CC0).</span></div>
 </footer>`;
 
 (function(){
