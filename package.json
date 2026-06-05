@@ -1,0 +1,9 @@
+{
+  "name": "mega-energie-sa",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MEGA ENERGIE SA — corporate website",
+  "dependencies": {
+    "nodemailer": "^6.9.14"
+  }
+}

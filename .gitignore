@@ -1,5 +1,6 @@
 .agents/
 skills-lock.json
+node_modules/
 logo_extract/
 __pycache__/
 *.pyc

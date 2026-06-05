@@ -28,19 +28,21 @@
 
 <section class="pb-20 sm:pb-28 lg:pb-32">
   <div class="wrap max-w-5xl grid lg:grid-cols-5 gap-10 lg:gap-12">
-    <form data-reveal class="lg:col-span-3 grid sm:grid-cols-2 gap-5" onsubmit="event.preventDefault(); this.reset(); document.getElementById('formMsg').classList.remove('hidden');">
-      <div><label for="f-name" data-i18n="form.name">Nom complet</label><input id="f-name" required data-i18n-ph="form.name.ph" class="field" placeholder="Jean Dupont"></div>
-      <div><label for="f-co" data-i18n="form.company">Société</label><input id="f-co" data-i18n-ph="form.company.ph" class="field" placeholder="Société SARL"></div>
-      <div><label for="f-email" data-i18n="form.email">E-mail</label><input id="f-email" type="email" required class="field" placeholder="email@exemple.com"></div>
+    <form id="quoteForm" data-reveal class="lg:col-span-3 grid sm:grid-cols-2 gap-5" novalidate>
+      <div><label for="f-name" data-i18n="form.name">Nom complet</label><input id="f-name" name="name" required data-i18n-ph="form.name.ph" class="field" placeholder="Jean Dupont"></div>
+      <div><label for="f-co" data-i18n="form.company">Société</label><input id="f-co" name="company" data-i18n-ph="form.company.ph" class="field" placeholder="Société SARL"></div>
+      <div><label for="f-email" data-i18n="form.email">E-mail</label><input id="f-email" name="email" type="email" required class="field" placeholder="email@exemple.com"></div>
       <div><label for="f-comm" data-i18n="form.commodity">Produit concerné</label>
-        <select id="f-comm" class="field text-cream">
+        <select id="f-comm" name="commodity" class="field text-cream">
           <option data-i18n="trade.c1.t">Produits pétroliers</option><option data-i18n="trade.c2.t">Pétrole &amp; Gaz</option><option data-i18n="trade.c3.t">Or</option>
           <option data-i18n="trade.c4.t">Riz</option><option data-i18n="trade.c5.t">Sucre</option><option data-i18n="trade.c6.t">Transport &amp; Logistique</option><option data-i18n="form.other">Autre</option>
         </select></div>
-      <div class="sm:col-span-2"><label for="f-msg" data-i18n="form.message">Message</label><textarea id="f-msg" rows="4" data-i18n-ph="form.message.ph" class="field resize-none" placeholder="Volume, itinéraire, échéance…"></textarea></div>
+      <div class="sm:col-span-2"><label for="f-msg" data-i18n="form.message">Message</label><textarea id="f-msg" name="message" rows="4" data-i18n-ph="form.message.ph" class="field resize-none" placeholder="Volume, itinéraire, échéance…"></textarea></div>
+      <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div class="sm:col-span-2 flex flex-col sm:flex-row sm:items-center gap-4">
         <button type="submit" class="btn btn-gold w-full sm:w-auto" data-i18n="form.send">Envoyer la demande</button>
         <span id="formMsg" class="hidden text-sm text-emerald" data-i18n="form.ok">✓ Merci — notre équipe vous recontacte très vite.</span>
+        <span id="formErr" class="hidden text-sm text-gold" data-i18n="form.err">Échec de l'envoi. Réessayez ou écrivez-nous directement.</span>
       </div>
     </form>
 

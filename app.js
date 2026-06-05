@@ -53,7 +53,7 @@ const I18N = {
     'contact.sub':'Dites-nous ce que vous souhaitez sourcer, financer, transporter ou approvisionner — notre équipe vous répond rapidement.',
     'form.name':'Nom complet','form.name.ph':'Jean Dupont','form.company':'Société','form.company.ph':'Société SARL',
     'form.email':'E-mail','form.commodity':'Produit concerné','form.other':'Autre','form.message':'Message','form.message.ph':'Volume, itinéraire, échéance…',
-    'form.send':'Envoyer la demande','form.ok':'✓ Merci — notre équipe vous recontacte très vite.',
+    'form.send':'Envoyer la demande','form.sending':'Envoi…','form.ok':'✓ Merci — notre équipe vous recontacte très vite.','form.err':'Échec de l’envoi. Réessayez ou écrivez à direction@megaenergiesa.com.',
     'contact.email':'E-mail','contact.phone':'Téléphone','contact.hq':'Siège social',
     'cta.title':'Prêt à négocier ?','cta.sub':'Notre équipe vous répond sous un jour ouvré.',
     'footer.tagline':'Énergie, matières premières &amp; logistique — au service de l’Afrique de l’Ouest depuis 2009.',
@@ -112,7 +112,7 @@ const I18N = {
     'contact.sub':'Tell us what you need to source, finance, transport or supply — our team responds promptly.',
     'form.name':'Full name','form.name.ph':'Jane Doe','form.company':'Company','form.company.ph':'Company Ltd.',
     'form.email':'Email','form.commodity':'Commodity of interest','form.other':'Other','form.message':'Message','form.message.ph':'Volume, route, timeframe…',
-    'form.send':'Send Enquiry','form.ok':'✓ Thank you — our team will be in touch shortly.',
+    'form.send':'Send Enquiry','form.sending':'Sending…','form.ok':'✓ Thank you — our team will be in touch shortly.','form.err':'Couldn’t send. Please retry or email direction@megaenergiesa.com.',
     'contact.email':'Email','contact.phone':'Phone','contact.hq':'Headquarters',
     'cta.title':'Ready to trade?','cta.sub':'Our team responds within one business day.',
     'footer.tagline':'Energy, commodities &amp; logistics — moving West Africa forward since 2009.',
@@ -228,6 +228,30 @@ const FOOTER_HTML = `
   langBtns.forEach(b=> b.addEventListener('click',()=> setLang(b.dataset.lang)));
   let initial='fr'; try{ initial=localStorage.getItem('lang')||'fr'; }catch(e){}
   setLang(initial);
+
+  /* contact form → /api/contact */
+  const qf = document.getElementById('quoteForm');
+  if(qf){
+    const lang = () => document.documentElement.lang || 'fr';
+    qf.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      const btn = qf.querySelector('button[type=submit]');
+      const ok = document.getElementById('formMsg');
+      const err = document.getElementById('formErr');
+      ok && ok.classList.add('hidden'); err && err.classList.add('hidden');
+      if(!qf.checkValidity()){ qf.reportValidity(); return; }
+      const data = Object.fromEntries(new FormData(qf).entries());
+      const label = btn.textContent;
+      btn.disabled = true; btn.textContent = (I18N[lang()]||I18N.fr)['form.sending'] || '…';
+      try{
+        const r = await fetch('/api/contact', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(data) });
+        const j = await r.json().catch(()=>({}));
+        if(r.ok && j.ok){ qf.reset(); ok && ok.classList.remove('hidden'); }
+        else { err && err.classList.remove('hidden'); }
+      }catch(_){ err && err.classList.remove('hidden'); }
+      finally{ btn.disabled = false; btn.textContent = label; }
+    });
+  }
 
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
